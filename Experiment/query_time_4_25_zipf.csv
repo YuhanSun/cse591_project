@@ -1,0 +1,136 @@
+citeseerx
+20
+spatial_range	time	true_count	access_count
+1.0E-4	7972	17	3079565
+0.001	1526	23	903860
+0.01	230	26	78176
+0.1	205	34	8997
+1.0	9	63	10
+
+40
+spatial_range	time	true_count	access_count
+1.0E-4	13475	15	3735579
+0.001	3463	24	1823578
+0.01	202	25	118955
+0.1	146	32	12039
+1.0	9	61	62
+
+60
+spatial_range	time	true_count	access_count
+1.0E-4	18152	12	4327767
+0.001	4331	22	1423340
+0.01	216	24	231472
+0.1	228	27	13504
+1.0	9	59	128
+
+80
+spatial_range	time	true_count	access_count
+1.0E-4	30757	3	6475933
+0.001	7434	19	2697674
+0.01	238	25	265888
+0.1	249	26	83283
+1.0	24	58	260
+
+
+go_uniprot
+20
+spatial_range	time	true_count	access_count
+1.0E-4	82	1	13302
+0.001	47	0	13306
+0.01	47	13	12970
+0.1	45	48	12311
+1.0	10	500	137
+
+40
+spatial_range	time	true_count	access_count
+1.0E-4	48	0	13306
+0.001	55	1	13278
+0.01	51	3	13212
+0.1	53	30	12693
+1.0	11	493	343
+
+60
+spatial_range	time	true_count	access_count
+1.0E-4	53	0	13306
+0.001	55	0	13306
+0.01	50	3	13241
+0.1	47	61	12215
+1.0	12	477	740
+
+80
+spatial_range	time	true_count	access_count
+1.0E-4	50	0	13306
+0.001	52	0	13306
+0.01	52	5	13234
+0.1	48	18	12980
+1.0	14	487	1431
+
+
+Patents
+20
+spatial_range	time	true_count	access_count
+1.0E-4	3843	4	722710
+0.001	2322	21	452492
+0.01	943	67	227353
+0.1	148	120	41389
+1.0	10	265	65
+
+40
+spatial_range	time	true_count	access_count
+1.0E-4	3174	7	673770
+0.001	2672	20	574636
+0.01	705	72	204296
+0.1	176	109	55086
+1.0	11	265	177
+
+60
+spatial_range	time	true_count	access_count
+1.0E-4	3027	6	674446
+0.001	3018	11	668588
+0.01	1215	46	315267
+0.1	273	103	83229
+1.0	10	259	456
+
+80
+spatial_range	time	true_count	access_count
+1.0E-4	3264	4	662706
+0.001	3613	6	701141
+0.01	1965	33	433211
+0.1	461	84	123208
+1.0	13	239	967
+
+
+uniprotenc_150m
+20
+spatial_range	time	true_count	access_count
+1.0E-4	14	0	674
+0.001	13	0	674
+0.01	13	1	672
+0.1	13	1	673
+1.0	10	500	34
+
+40
+spatial_range	time	true_count	access_count
+1.0E-4	13	0	674
+0.001	13	0	674
+0.01	13	0	674
+0.1	13	0	674
+1.0	10	500	64
+
+60
+spatial_range	time	true_count	access_count
+1.0E-4	13	0	674
+0.001	13	0	674
+0.01	13	3	671
+0.1	13	40	634
+1.0	10	500	91
+
+80
+spatial_range	time	true_count	access_count
+1.0E-4	13	0	674
+0.001	13	0	674
+0.01	13	0	674
+0.1	13	0	674
+1.0	13	27	613
+
+

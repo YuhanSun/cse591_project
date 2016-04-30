@@ -11,13 +11,13 @@ public class Postgres_Operation {
 		ArrayList<String> datasource_al = new ArrayList<String>();
 		datasource_al.add("citeseerx");
 		datasource_al.add("go_uniprot");
-//		datasource_al.add("Patents");
+		datasource_al.add("Patents");
 		datasource_al.add("uniprotenc_150m");
 		
 		ArrayList<String> suffix_al = new ArrayList<String>();
-//		suffix_al.add("Random");
+		suffix_al.add("Random");
 		suffix_al.add("Clustered");
-		
+		suffix_al.add("Zipf");
 		
 		for(int datasource_index = 0;datasource_index<datasource_al.size();datasource_index++)
 		{
@@ -51,15 +51,15 @@ public class Postgres_Operation {
 		PostgresJDBC psql = new PostgresJDBC();
 		
 		ArrayList<String> datasource_al = new ArrayList<String>();
-//		datasource_al.add("citeseerx");
-//		datasource_al.add("go_uniprot");
-//		datasource_al.add("Patents");
+		datasource_al.add("citeseerx");
+		datasource_al.add("go_uniprot");
+		datasource_al.add("Patents");
 		datasource_al.add("uniprotenc_150m");
 		
 		ArrayList<String> suffix_al = new ArrayList<String>();
 		suffix_al.add("Random");
-//		suffix_al.add("Clustered");
-		
+		suffix_al.add("Clustered");
+		suffix_al.add("Zipf");
 		
 		for(int datasource_index = 0;datasource_index<datasource_al.size();datasource_index++)
 		{
@@ -78,7 +78,7 @@ public class Postgres_Operation {
 					suffix = "_"+suffix_al.get(suffix_index);
 					filesuffix =  suffix_al.get(suffix_index)+"_distributed";
 				}
-				for(int ratio = 40;ratio<=80;ratio+=20)
+				for(int ratio = 20;ratio<=80;ratio+=20)
 				{
 					psql.LoadData(datasource, suffix, filesuffix, ratio);
 				}
@@ -87,20 +87,22 @@ public class Postgres_Operation {
 		psql.DisConnect();
 	}
 	
+	
+	
 	public static void CreateGistIndex()
 	{
 		PostgresJDBC psql = new PostgresJDBC();
 		
 		ArrayList<String> datasource_al = new ArrayList<String>();
-//		datasource_al.add("citeseerx");
-//		datasource_al.add("go_uniprot");
-//		datasource_al.add("Patents");
+		datasource_al.add("citeseerx");
+		datasource_al.add("go_uniprot");
+		datasource_al.add("Patents");
 		datasource_al.add("uniprotenc_150m");
 		
 		ArrayList<String> suffix_al = new ArrayList<String>();
-//		suffix_al.add("Random");
+		suffix_al.add("Random");
 		suffix_al.add("Clustered");
-//		suffix_al.add("Zipf");
+		suffix_al.add("Zipf");
 		
 		for(int datasource_index = 0;datasource_index<datasource_al.size();datasource_index++)
 		{
@@ -128,8 +130,8 @@ public class Postgres_Operation {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//		CreateTable();
-//		LoadData();
+		CreateTable();
+		LoadData();
 		CreateGistIndex();
 	}
 

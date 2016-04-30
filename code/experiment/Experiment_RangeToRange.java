@@ -14,8 +14,6 @@ import functions.Traversal_RangeToRange;
 
 public class Experiment_RangeToRange {
 	
-	public static int experiment_count_tra = 50;
-	public static int experiment_count_spa = 10;
 
 //	public static void Experiment()
 //	{
@@ -53,15 +51,15 @@ public class Experiment_RangeToRange {
 		MyRectangle rect = new MyRectangle(0,0,1000,1000);
 		ArrayList<String> datasource_a = new ArrayList<String>();
 		//			datasource_a.add("citeseerx");
-//					datasource_a.add("go_uniprot");
-//		datasource_a.add("Patents");
+					datasource_a.add("go_uniprot");
+		datasource_a.add("Patents");
 					datasource_a.add("uniprotenc_150m");
 
 					//String suffix = args[0];
 		ArrayList<String> suffix_al = new ArrayList<String>();
-		suffix_al.add("random");
-//		suffix_al.add("clustered");
-//		suffix_al.add("zipf");
+		//suffix_al.add("random");
+		suffix_al.add("clustered");
+		suffix_al.add("zipf");
 
 		for(int name_index = 0;name_index<datasource_a.size();name_index++)
 		{
@@ -74,7 +72,7 @@ public class Experiment_RangeToRange {
 				int node_count = OwnMethods.GetNodeCount(datasource);
 				OwnMethods.WriteFile(resultpath, true, datasource+"\n");
 				{
-					for(int ratio = 60;ratio<=80;ratio+=20)
+					for(int ratio = 20;ratio<=80;ratio+=20)
 					{
 						OwnMethods.WriteFile(resultpath, true, ratio+"\n");
 						OwnMethods.WriteFile(resultpath, true, "spatial_range\ttra_time\ttra_accesscount\ttrue_count\tspareach_time\n");
@@ -89,12 +87,19 @@ public class Experiment_RangeToRange {
 
 						Random r = new Random();
 
-						double selectivity = 0.00001;
+						int experiment_count_tra = 50;
+						int experiment_count_spa = 10;
+						double selectivity = 0.0001;
+						
+						if(datasource.equals("uniprotenc_150m"))
+							selectivity = 0.00001;
+						
 						double spatial_total_range = 1000;
 						boolean isrun = true;
 						boolean isbreak = false;
 						{
-							while(selectivity<=0.02)
+							//while(selectivity<=0.02)
+							for(int loop = 0;loop<4;loop++)
 							{
 								double rect_size = spatial_total_range * Math.sqrt(selectivity);
 								OwnMethods.WriteFile(resultpath, true, selectivity+"\t");
@@ -122,7 +127,7 @@ public class Experiment_RangeToRange {
 								System.out.println(Neo4j_Graph_Store.StartMyServer(datasource));
 
 								try {
-									Thread.currentThread().sleep(5000);
+									Thread.currentThread().sleep(3000);
 								} catch (InterruptedException e1) {
 									// TODO Auto-generated catch block
 									e1.printStackTrace();
@@ -193,6 +198,7 @@ public class Experiment_RangeToRange {
 									String R_Tree_suffix = "";
 									if(suffix.equals("random"))
 										R_Tree_suffix = "";
+									else R_Tree_suffix = "_"+suffix;
 									Spatial_Reach_Index spareach = new Spatial_Reach_Index(datasource + "_Random_" + ratio, R_Tree_suffix);
 									try {
 										Thread.currentThread().sleep(5000);

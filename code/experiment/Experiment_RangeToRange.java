@@ -14,7 +14,7 @@ import functions.Traversal_RangeToRange;
 
 public class Experiment_RangeToRange {
 	
-	public static int experiment_count_tra = 100;
+	public static int experiment_count_tra = 50;
 	public static int experiment_count_spa = 10;
 
 //	public static void Experiment()
@@ -53,8 +53,8 @@ public class Experiment_RangeToRange {
 		MyRectangle rect = new MyRectangle(0,0,1000,1000);
 		ArrayList<String> datasource_a = new ArrayList<String>();
 		//			datasource_a.add("citeseerx");
-					datasource_a.add("go_uniprot");
-		datasource_a.add("Patents");
+//					datasource_a.add("go_uniprot");
+//		datasource_a.add("Patents");
 					datasource_a.add("uniprotenc_150m");
 
 					//String suffix = args[0];
@@ -74,11 +74,8 @@ public class Experiment_RangeToRange {
 				int node_count = OwnMethods.GetNodeCount(datasource);
 				OwnMethods.WriteFile(resultpath, true, datasource+"\n");
 				{
-					for(int ratio = 20;ratio<=80;ratio+=20)
+					for(int ratio = 60;ratio<=80;ratio+=20)
 					{
-						if(datasource.equals("go_uniprot")&&(ratio == 20 || ratio == 40))
-							continue;
-						
 						OwnMethods.WriteFile(resultpath, true, ratio+"\n");
 						OwnMethods.WriteFile(resultpath, true, "spatial_range\ttra_time\ttra_accesscount\ttrue_count\tspareach_time\n");
 						long graph_size = OwnMethods.GetNodeCount(datasource);
@@ -92,12 +89,12 @@ public class Experiment_RangeToRange {
 
 						Random r = new Random();
 
-						double selectivity = 0.0001;
+						double selectivity = 0.00001;
 						double spatial_total_range = 1000;
 						boolean isrun = true;
 						boolean isbreak = false;
 						{
-							while(selectivity<=0.2)
+							while(selectivity<=0.02)
 							{
 								double rect_size = spatial_total_range * Math.sqrt(selectivity);
 								OwnMethods.WriteFile(resultpath, true, selectivity+"\t");
@@ -250,8 +247,10 @@ public class Experiment_RangeToRange {
 									OwnMethods.WriteFile(resultpath, true, average_time+"\n");
 									
 									if(average_time>20000)
-										experiment_count_spa=10;
+										experiment_count_spa=3;
 //										isrun = false;
+									if(average_time>40000)
+										experiment_count_spa = 1;
 								}
 //								else
 //									OwnMethods.WriteFile(resultpath, true, "\t");

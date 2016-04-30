@@ -308,6 +308,21 @@ public class PostgresJDBC {
 		}
 	}
 	
+	public void LoadDataByCopy(String table_name, String filesource_path, String delimiters)
+	{
+		try
+		{
+			String query = String.format("copy %s from '%s' using delimiters E'\t';", table_name, filesource_path, delimiters);
+			st.executeUpdate(query);
+		}
+		catch(Exception e)
+		{
+			this.DisConnect();
+			e.printStackTrace();
+		}
+
+	}
+	
 	public void CreateGistIndex(String datasource, String suffix, int ratio)
 	{
 		try

@@ -12,6 +12,58 @@ import com.sun.jersey.api.client.WebResource;
 
 public class OwnMethods {
 	
+	public static void EntityConversionForCopy(String source_filepath, String output_path, String delimiters)
+	{
+		BufferedReader reader = null;
+		File file = null;
+		FileWriter fw = null;
+		
+		try
+		{
+			file = new File(source_filepath);
+			reader = new BufferedReader(new FileReader(file));
+			String temp = null;
+			temp = reader.readLine();
+			
+			fw = new FileWriter(output_path);
+			while((temp = reader.readLine())!=null)
+			{
+				String[] l = temp.split(delimiters);
+				if(Integer.parseInt(l[1]) == 1)
+				{
+					String id = l[0];
+					String lon = l[2];
+					String lat = l[3];
+					String line = String.format("%s\t%s,%s\n", id, lon, lat);
+					fw.write(line);
+				}
+			}
+			reader.close();
+			fw.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(reader!=null)
+				try {
+					reader.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			if(fw!=null)
+				try {
+					fw.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+	}
+	
 	public static ArrayList<Long> ReadExperimentNode(String datasource)
 	{
 		String filepath = "/home/yuhansun/Documents/Real_data/"+datasource+"/experiment_id.txt";
@@ -154,15 +206,26 @@ public class OwnMethods {
 	
 	public static void WriteFile(String filename, boolean app, String str)
 	{
+		FileWriter fw = null;
 		try 
 		{
-			FileWriter fw = new FileWriter(filename,app);
+			fw = new FileWriter(filename,app);
 			fw.write(str);
 			fw.close();
 		} 
 		catch (IOException e) 
 		{
 			e.printStackTrace();
+		}
+		finally
+		{
+			if(fw!=null)
+				try {
+					fw.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		}
 	}
 

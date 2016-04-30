@@ -1,0 +1,5 @@
+#!/bin/bash
+#java -cp Courses/cse591/cse591_workspace/cse591/target/cse591-0.0.1-SNAPSHOT.jar functions.Batch_Inserter "LoadReachabilityIndex" "citeseerx"
+#java -cp Courses/cse591/cse591_workspace/cse591/target/cse591-0.0.1-SNAPSHOT.jar functions.Batch_Inserter "LoadReachabilityIndex" "Patents"
+#java -cp Courses/cse591/cse591_workspace/cse591/target/cse591-0.0.1-SNAPSHOT.jar functions.Batch_Inserter "LoadReachabilityIndex" "go_uniprot"
+java -cp Courses/cse591/cse591_workspace/cse591/target/cse591-0.0.1-SNAPSHOT.jar functions.Batch_Inserter "LoadReachabilityIndex" "uniprotenc_150m"

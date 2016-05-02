@@ -1,0 +1,119 @@
+citeseerx
+20
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	15320	108676	10	9630
+0.001	11671	14113	10	16568
+0.01	10780	1987	10	23545
+0.1	10822	210	10	399569
+
+40
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	11523	136354	10	7631
+0.001	15274	22270	10	16607
+0.01	11100	2676	10	22208
+0.1	8297	388	10	78760
+
+60
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	13142	287639	10	5960
+0.001	11607	18307	10	14449
+0.01	9267	1538	10	22584
+0.1	3952	3100	50	87748
+
+80
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	30231	681292	10	3565
+0.001	8929	67906	10	10107
+0.01	6551	22419	50	18728
+0.1	3505	2864	50	29879
+
+
+go_uniprot
+20
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	4434	727961	58	6597
+0.001	3143	49493	478	49493
+0.01	1785	12719	100	26107	
+0.1	1755	1128	100	29098		
+	
+40
+spatial_range	tra_time	spareach_time	true_count	access_count
+1.0E-4	3807	4668	34	648602
+0.001	5597	148394	91	107676	
+0.01	1775	14788	100	22805	
+0.1	1631	1558	100	36985	
+
+60
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	5267	105084	7	10765
+0.001	6785	173100	73	45861
+0.01	1773	23355	100	24084
+0.1	1271	2769	100	27772
+
+80
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	3460	77391	2	6208
+0.001	7553	190188	32	41576
+0.01	1996	56597	100	40161
+0.1	803	6420	100	32175
+
+
+Patents
+20
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	26291	1355927	100	7160
+0.001	9707	131709	100	26053
+0.01	4315	13354	100	44334
+0.1	1593	1277	100	86036
+
+40
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	32020	1815251	100	5949
+0.001	10645	186330	100	22312
+0.01	4176	14487	100	46107
+0.1	1251	1513	100	67790
+
+60
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	44126	2656103	99	4738
+0.001	11307	248006	100	18952
+0.01	5762	27854	100	49013
+0.1	1419	2776	100	66441
+
+80
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-4	58705	3704674	79	3336
+0.001	14446	487549	100	11428
+0.01	6779	59477	100	34347
+0.1	997	4606	100	48444
+
+
+uniprotenc_150m
+20
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-5	8178	3680	0	10392
+1.0E-4	18483	68474	6	85048
+0.001	22522	126532	100	720471
+0.01	11423	35160	100	
+
+40
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-5	6334	2737	0	8203
+1.0E-4	23114	26199	1	59317
+0.001	28558	68688	48	731426
+0.01	17852	24361	50	1154694	
+
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-5	4727	1867	0	5545
+1.0E-4	19913	17546	1	40164
+0.001	33641	102751	32	371165
+0.01	17658	27180	50	8428409
+
+80
+spatial_range	tra_time	tra_accesscount	true_count	spareach_time
+1.0E-5	2467	1002	0	3571
+1.0E-4	13949	9129	0	24367
+0.001	27416	74050	15	305080
+0.01	20651	39542	50	8342730
+
+
